@@ -1,0 +1,18 @@
+package Movies;
+import javax.swing.JOptionPane;
+
+public class Movies{
+	public static void main (String[] args){
+		Dictionary movies = new Dictionary();
+		movies.cargarLists();
+		String window = JOptionPane.showInputDialog("Which option option 1 or option 2?: ");
+		if (window.equalsIgnoreCase("1")){
+			String movie = JOptionPane.showInputDialog("Write the name of 2 movies: ");
+			movies.Dictionaries(movies);
+		}
+		else if (window.equalsIgnoreCase("2")){
+			String movie = JOptionPane.showInputDialog("Write the acto´s name: ");
+			movies.Dictionaries(movies);
+		}
+	}
+}
