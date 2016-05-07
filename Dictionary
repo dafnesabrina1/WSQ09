@@ -1,0 +1,31 @@
+package Movies;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Dictionary {
+	HashMap<String, Actors> name = new HashMap<String, Actors>();
+	void Dictionaries(String values){
+		if (values.contains("|")){
+			int place = values.indexOf("|");
+			String movie1 = values.substring(0,place);
+			String movie2 = values.substring(place+1);
+			findActors(movie1, movie2);
+		}
+		else if (values.contains("&")){
+			int place = values.indexOf("&");
+			String movie1 = values.substring(0,place);
+			String movie2 = values.substring(place+1);
+			andActors(movie1, movie2);
+		}
+		else if (values.contains("^")){
+			int place = values.indexOf("^");
+			String movie1 = values.substring(0,place);
+			String movie2 = values.substring(place+1);
+			xorActors(movie1, movie2);
+		}
+	}
+
+}
